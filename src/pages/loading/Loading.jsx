@@ -23,7 +23,7 @@ export default function Loading({ loaded, children }) {
 
   useEffect(() => {
     if (loaded) {
-      setTimeout(() => { setMounted(true); }, 300);
+      setTimeout(() => { setMounted(true); }, 500);
     }
   }, [loaded]);
 
