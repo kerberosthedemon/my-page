@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.css';
 
-export default function Home() {
+export default function Home({ setIsMounted }) {
+
+  useEffect(() => {
+    setIsMounted(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section>
       <div className="box">
