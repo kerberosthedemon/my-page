@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { Fade } from '@material-ui/core';
+import { Fade, CircularProgress } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     position: 'absolute',
     backgroundColor: 'white',
-    zIndex: 3
+    zIndex: 3,
+    display: 'flex',
+    'justify-content': 'center', /*centers items on the line (the x-axis by default)*/
+    'align-items': 'center' /*centers items on the cross-axis (y by default)*/
   },
 }));
 
@@ -29,9 +32,9 @@ export default function Loading({ loaded, children }) {
 
   return (
     <React.Fragment>
-      <Fade in={!mounted}>
+      <Fade in={!mounted} timeout={{ enter: 0 }}>
         <div className={classes.container}>
-          <LinearProgress />
+          <CircularProgress />
         </div>
       </Fade>
       {loaded && children}
