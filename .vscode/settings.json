@@ -1,4 +1,7 @@
 {
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
     "editor.tabSize": 2,
-    "editor.formatOnSave": true
+    "eslint.lintTask.enable": true,
+    "eslint.alwaysShowStatus": true
 }
