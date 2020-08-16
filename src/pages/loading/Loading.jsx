@@ -32,7 +32,7 @@ export default function Loading({ loaded, children }) {
 
   return (
     <React.Fragment>
-      <Fade in={!mounted} timeout={{ enter: 0 }}>
+      <Fade in={!mounted} enter={false} appear={false}>
         <div className={classes.container}>
           <CircularProgress />
         </div>
