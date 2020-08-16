@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { Fade } from '@material-ui/core';
@@ -17,12 +17,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Loading({ loaded, mounted, children }) {
+export default function Loading({ loaded, children }) {
   const classes = useStyles();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    if (loaded) {
+      setTimeout(() => { setMounted(true); }, 300);
+    }
+  }, [loaded]);
 
   return (
     <React.Fragment>
-      <Fade in={!loaded && !mounted}>
+      <Fade in={!mounted}>
         <div className={classes.container}>
           <LinearProgress />
         </div>
