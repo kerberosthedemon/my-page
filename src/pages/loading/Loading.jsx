@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
 import { Fade, CircularProgress } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +31,7 @@ export default function Loading({ loaded, children }) {
 
   return (
     <React.Fragment>
-      <Fade in={!mounted} enter={false} appear={false}>
+      <Fade in={!mounted} enter={false} appear={false} unmountOnExit>
         <div className={classes.container}>
           <CircularProgress />
         </div>

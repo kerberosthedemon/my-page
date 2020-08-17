@@ -1,15 +1,29 @@
 import React from 'react';
 import './home.css';
+import { Grid } from '@material-ui/core';
+import AvatarGlass from './AvatarGlass/AvatarGlass';
+import InfoText from './InfoText/InfoText';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => {
+  return {
+    container: {
+      maxHeight: '800px'
+    }
+  }
+});
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
-    <section>
-      <div className="box">
-        <h2>Bienvenido</h2>
-        <p>Este es mi sito web, soy un desarrollador de tiempo completo, me entusiasma mucho la programacion
-          <br />y deseo algun dia poder lograr mis sueños a traves de mis programas
-          <br />Aqui dejo unos links para que puedas ver mis trabajos, muchas gracias por visitar mi sitio web!</p>
-      </div>
-    </section>
+    <Grid container alignContent="center" justify="center" spacing={1} className={classes.container}>
+      <Grid item>
+        <AvatarGlass />
+      </Grid>
+      <Grid item xs={6}>
+        <InfoText />
+      </Grid>
+    </Grid >
   );
 }
