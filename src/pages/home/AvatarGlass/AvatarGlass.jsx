@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => {
       height: '268px !important'
     },
     paper: {
-      // height: '200px',
       'border-radius': 0,
       flexGrow: 1,
       padding: theme.spacing(2),
@@ -27,12 +26,9 @@ const useStyles = makeStyles(theme => {
       minWidth: '300px'
     },
     avatar: {
-      // transform: 'translateY(3px) translateX(3px)',
       transform: 'scale(.95)',
       width: '100%',
       height: '100%',
-      // 'box-shadow': '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
-      // 'border-style': 'solid',
       'border-color': '#ff1744',
       'border-width': 'thick',
       'z-index': 10,
@@ -44,7 +40,6 @@ const useStyles = makeStyles(theme => {
         left: '5px',
         right: '5px',
         bottom: '5px',
-        // border: '5px solid blue'
       }
     },
     avatarContainer: {
@@ -60,7 +55,7 @@ const useStyles = makeStyles(theme => {
       borderRadius: '50%',
       transform: 'translateY(50%)',
       zIndex: 1,
-      'box-shadow': '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
+      'box-shadow': theme.shadows[1],
       position: 'relative',
     },
     linkButton: {
