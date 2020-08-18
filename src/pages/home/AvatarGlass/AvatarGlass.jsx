@@ -8,6 +8,25 @@ const useStyles = makeStyles(theme => {
   return {
     box: {
       // padding: theme.spacing(2)
+      position: 'relative',
+      /* max-width: 600px; */
+      'box-shadow': '0 5px 15px rgba(0,0,0,.5)',
+      overflow: 'hidden',
+      color: '#000',
+      height: '100%',
+      '&::before': {
+        content: '" "',
+        position: 'absolute',
+        top: '-20px',
+        left: '-20px',
+        right: '-20px',
+        bottom: '-20px',
+        background: 'url(https://images.unsplash.com/photo-1485378980564-c9a7bb6287c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80)',
+        'background-attachment': 'fixed',
+        'background-size': 'cover',
+        'background-repeat': 'no-repeat',
+        filter: 'blur(5px)',
+      }
     },
     titleContainer: {
       // alignSelf: 'center'
@@ -29,7 +48,8 @@ const useStyles = makeStyles(theme => {
     paperContainer: {
       marginTop: 0,
       zIndex: 1,
-      display: 'flex'
+      display: 'flex',
+      height: '280px'
     },
     paper: {
       // height: '200px',
@@ -41,7 +61,8 @@ const useStyles = makeStyles(theme => {
       'justify-content': 'center',
       'align-content': 'space-around',
       'flex-direction': 'column',
-      height: '100vh'
+      height: '100vh',
+      flexWrap: 'nowrap'
     },
     gridItem: {
       minWidth: '300px'
@@ -93,6 +114,10 @@ const useStyles = makeStyles(theme => {
     linkButtonContainer: {
       height: '100%',
       alignContent: 'space-evenly'
+    },
+    section: {
+      position: 'relative',
+      height: '200px'
     }
   }
 });
@@ -106,9 +131,9 @@ export default function AvatarGlass() {
           <Avatar className={classes.avatar} src={avatar} />
         </div>
       </Grid>
-      <Grid item xs={3} className={classes.gridItem} >
-        <section>
-          <div className={`box ${classes.box}`}>
+      <Grid item className={classes.gridItem} >
+        <section className={classes.section}>
+          <div className={`${classes.box}`}>
             <Grid container direction="column" spacing={0} className={classes.gridContainer}>
               <Grid item className={classes.titleContainer}>
                 <Typography className={classes.title} variant="h5">Nicolas Espindola</Typography>
@@ -120,14 +145,14 @@ export default function AvatarGlass() {
           </div>
         </section>
       </Grid>
-      <Grid item xs={5} className={`${classes.paperContainer} ${classes.gridItem}`}>
+      <Grid item className={`${classes.paperContainer}`}>
         <Paper className={classes.paper}>
           <Grid container className={classes.linkButtonContainer} spacing={0}>
             <Grid item xs={12}>
               <Button variant="outlined" className={classes.linkButton} href="mailto:kerberosthedemon@yandex.com">Contact</Button>
             </Grid>
             <Grid item xs={12}>
-              <Button variant="outlined" className={classes.linkButton}>LinkedIn</Button>
+              <Button variant="outlined" className={classes.linkButton} href="https://www.linkedin.com/in/nicolas-espindola-69435559/">LinkedIn</Button>
             </Grid>
             <Grid item xs={12}>
               <Button variant="outlined" className={classes.linkButton} href="https://nicolas-espindola.xyz">Blog</Button>
