@@ -48,8 +48,8 @@ const useStyles = makeStyles(theme => {
       width: '150px'
     },
     avatarBorder: {
-      // background: 'linear-gradient(to top, #6186f4, #60b591)',
-      background: '#808080',
+      background: 'linear-gradient(to top, #6186f4, #60b591)',
+      // background: '#808080',
       width: '100%',
       height: '100%',
       borderRadius: '50%',
