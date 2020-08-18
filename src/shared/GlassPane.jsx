@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Grid, Typography, Button } from '@material-ui/core';
 import backgroundImage from './../img/background.webp'
+import useFocusElementOnStart from './../hooks/useFocusOnStart';
 
 const useStyles = makeStyles(theme => {
   return {
@@ -59,6 +60,7 @@ const useStyles = makeStyles(theme => {
 });
 
 export default function GlassPane() {
+  const ref = useFocusElementOnStart();
   const classes = useStyles();
 
   return (
@@ -69,7 +71,7 @@ export default function GlassPane() {
             <Typography className={classes.title} variant="h5">Nicolas Espindola</Typography>
           </Grid>
           <Grid item>
-            <Button size="small" variant="outlined" className={classes.button}>Web Developer</Button>
+            <Button disableFocusRipple ref={ref} size="small" variant="outlined" className={classes.button}>Web Developer</Button>
           </Grid>
         </Grid>
       </div>
