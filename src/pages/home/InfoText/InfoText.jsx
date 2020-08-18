@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => {
       // maxWidth: '600px',
     },
     paper: {
-      height: 'calc(280px + 200px + 75px)',
+      height: 'calc(268px + 200px + 75px)',
       // transform: 'translateY(37px)',
       borderRadius: 0
     }
