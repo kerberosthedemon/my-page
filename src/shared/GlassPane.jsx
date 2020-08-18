@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => {
     },
 
     gridContainer: {
-      'justify-content': 'end',
+      'justify-content': 'flex-end',
       height: '200px',
       padding: theme.spacing(2),
       alignItems: 'center'
