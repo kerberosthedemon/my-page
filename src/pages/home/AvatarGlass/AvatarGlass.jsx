@@ -3,6 +3,7 @@ import './avatarGlass.css'
 import { Typography, Paper, Button, Grid, Avatar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core';
 import avatar from './../../../img/nico.png';
+import backgroundImage from './../../../img/background.webp'
 
 const useStyles = makeStyles(theme => {
   return {
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => {
         left: '-20px',
         right: '-20px',
         bottom: '-20px',
-        background: 'url(https://images.unsplash.com/photo-1485378980564-c9a7bb6287c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80)',
+        background: `url(${backgroundImage})`,
         'background-attachment': 'fixed',
         'background-size': 'cover',
         'background-repeat': 'no-repeat',
