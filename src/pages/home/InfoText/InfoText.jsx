@@ -11,13 +11,13 @@ const useStyles = makeStyles(theme => {
       height: '100%'
     },
     item: {
-      marginTop: '156px',
-      width: '100%',
-      maxWidth: 'unset',
-      minWidth: '300px'
+      // marginTop: '156px',
+      // width: '100%',
+      // maxWidth: '600px',
     },
     paper: {
-      height: '100%',
+      height: 'calc(280px + 200px + 75px)',
+      transform: 'translateY(37px)',
       borderRadius: 0
     }
   }
@@ -28,7 +28,7 @@ export default function InfoText() {
 
   return (
     <Grid container direction="column" justify="center" className={classes.container}>
-      <Grid item xs={8} className={classes.item}>
+      <Grid item className={classes.item}>
         <Card className={classes.paper}>
           <CardContent>
             <Typography variant="h5">

@@ -8,7 +8,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => {
   return {
     container: {
-      maxHeight: '800px'
+      height: '100%',
+      width: '100%'
+    },
+    infoText: {
+      minWidth: '300.6px',
     }
   }
 });
@@ -17,11 +21,16 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Grid container alignContent="center" justify="center" spacing={1} className={classes.container}>
+    <Grid container
+      direction="row"
+      justify="center"
+      alignItems="stretch"
+      spacing={1}
+      className={classes.container}>
       <Grid item>
         <AvatarGlass />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item className={classes.infoText}>
         <InfoText />
       </Grid>
     </Grid >

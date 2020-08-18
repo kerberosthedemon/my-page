@@ -1,51 +1,12 @@
 import React from 'react'
 import './avatarGlass.css'
-import { Typography, Paper, Button, Grid, Avatar } from '@material-ui/core'
+import { Paper, Button, Grid, Avatar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core';
 import avatar from './../../../img/nico.png';
-import backgroundImage from './../../../img/background.webp'
+import GlassPane from '../../../shared/GlassPane';
 
 const useStyles = makeStyles(theme => {
   return {
-    box: {
-      // padding: theme.spacing(2)
-      position: 'relative',
-      /* max-width: 600px; */
-      'box-shadow': '0 5px 15px rgba(0,0,0,.5)',
-      overflow: 'hidden',
-      color: '#000',
-      height: '100%',
-      '&::before': {
-        content: '" "',
-        position: 'absolute',
-        top: '-20px',
-        left: '-20px',
-        right: '-20px',
-        bottom: '-20px',
-        background: `url(${backgroundImage})`,
-        'background-attachment': 'fixed',
-        'background-size': 'cover',
-        'background-repeat': 'no-repeat',
-        filter: 'blur(5px)',
-      }
-    },
-    titleContainer: {
-      // alignSelf: 'center'
-    },
-    title: {
-      zIndex: 2,
-      // paddingTop: '56px',
-      color: 'white',
-      position: 'relative',
-      margin: '0 0 20px',
-      padding: 0,
-      fontSize: '1.8rem'
-    },
-    button: {
-      // backgroundColor: '#0063cc',
-      color: '#ff1744',
-      borderColor: '#ff1744',
-    },
     paperContainer: {
       marginTop: 0,
       zIndex: 1,
@@ -59,25 +20,16 @@ const useStyles = makeStyles(theme => {
       padding: theme.spacing(2),
     },
     grid: {
-      'justify-content': 'center',
-      'align-content': 'space-around',
-      'flex-direction': 'column',
-      height: '100vh',
-      flexWrap: 'nowrap'
+      height: '100%'
     },
     gridItem: {
       minWidth: '300px'
     },
-    gridContainer: {
-      'justify-content': 'end',
-      height: '100%',
-      padding: theme.spacing(2),
-      alignItems: 'center'
-    },
     avatar: {
-      transform: 'translateY(3px) translateX(3px)',
-      height: '150px',
-      width: '150px',
+      // transform: 'translateY(3px) translateX(3px)',
+      transform: 'scale(.95)',
+      width: '100%',
+      height: '100%',
       // 'box-shadow': '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
       // 'border-style': 'solid',
       'border-color': '#ff1744',
@@ -96,12 +48,14 @@ const useStyles = makeStyles(theme => {
     },
     avatarContainer: {
       alignSelf: 'center',
+      height: '150px',
+      width: '150px'
     },
     avatarBorder: {
       // background: 'linear-gradient(to top, #ff1744, #ff1744)',
       background: '#808080',
-      width: '156px',
-      height: '156px',
+      width: '100%',
+      height: '100%',
       borderRadius: '50%',
       transform: 'translateY(50%)',
       zIndex: 1,
@@ -116,35 +70,25 @@ const useStyles = makeStyles(theme => {
       height: '100%',
       alignContent: 'space-evenly'
     },
-    section: {
-      position: 'relative',
-      height: '200px'
-    }
   }
 });
 
 export default function AvatarGlass() {
   const classes = useStyles();
   return (
-    <Grid container spacing={0} className={classes.grid}>
+    <Grid container spacing={0}
+      wrap="nowrap"
+      justify="center"
+      direction="column"
+      alignItems="stretch"
+      className={classes.grid}>
       <Grid item className={classes.avatarContainer}>
         <div className={classes.avatarBorder}>
           <Avatar className={classes.avatar} src={avatar} />
         </div>
       </Grid>
       <Grid item className={classes.gridItem} >
-        <section className={classes.section}>
-          <div className={`${classes.box}`}>
-            <Grid container direction="column" spacing={0} className={classes.gridContainer}>
-              <Grid item className={classes.titleContainer}>
-                <Typography className={classes.title} variant="h5">Nicolas Espindola</Typography>
-              </Grid>
-              <Grid item>
-                <Button size="small" variant="outlined" className={classes.button}>Web Developer</Button>
-              </Grid>
-            </Grid>
-          </div>
-        </section>
+        <GlassPane />
       </Grid>
       <Grid item className={`${classes.paperContainer}`}>
         <Paper className={classes.paper}>
