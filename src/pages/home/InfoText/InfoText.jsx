@@ -8,7 +8,8 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles(theme => {
   return {
     container: {
-      height: '100%'
+      height: '100%',
+      minWidth: '300.6px'
     },
     item: {
       // marginTop: '156px',

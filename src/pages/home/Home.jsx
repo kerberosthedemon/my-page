@@ -11,9 +11,6 @@ const useStyles = makeStyles(theme => {
       height: '100%',
       width: '100%'
     },
-    infoText: {
-      minWidth: '300.6px',
-    }
   }
 });
 
@@ -21,18 +18,21 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Grid container
-      direction="row"
-      justify="center"
-      alignItems="stretch"
-      spacing={1}
-      className={classes.container}>
-      <Grid item>
-        <AvatarGlass />
-      </Grid>
-      <Grid item className={classes.infoText}>
-        <InfoText />
-      </Grid>
-    </Grid >
+    <React.Fragment>
+      <Grid container
+        direction="row"
+        justify="center"
+        alignItems="stretch"
+        spacing={1}
+        className={classes.container}>
+        <Grid item>
+          <AvatarGlass />
+        </Grid>
+        <Grid item className={classes.infoText}>
+          <InfoText />
+        </Grid>
+      </Grid >
+      <div id="background"></div>
+    </React.Fragment>
   );
 }
