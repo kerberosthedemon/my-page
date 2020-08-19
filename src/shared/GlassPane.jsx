@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => {
         'background-attachment': 'fixed',
         'background-size': 'cover',
         'background-repeat': 'no-repeat',
+        backgroundPosition: 'center',
         filter: 'blur(5px)',
       }
     },
