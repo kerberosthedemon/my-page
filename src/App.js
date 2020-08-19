@@ -1,8 +1,8 @@
 import React from 'react'
 import Home from './pages/home/Home'
-import backgroundImage from './img/background.webp'
 import Loading from './pages/loading/Loading';
 import { useProgressiveImageArray } from './hooks/useProgressiveImageArray';
+import backgroundImage from './img/background.webp'
 import avatar from './img/nico.png'
 
 export default function App() {
