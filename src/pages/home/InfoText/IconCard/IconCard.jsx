@@ -1,15 +1,14 @@
 import React from 'react'
 import { Grid, Card, CardContent, Typography } from '@material-ui/core';
-import CodeIcon from '@material-ui/icons/Code'
 
-export default function IconCard() {
+export default function IconCard({ text, children }) {
   return (
-    <Grid item>
+    <Grid item xs={4}>
       <Card variant="outlined">
         <CardContent>
           <Grid container direction="column" alignContent="center" justify="center" alignItems="center">
-            <Grid item><CodeIcon /></Grid>
-            <Grid item><Typography>Code</Typography></Grid>
+            <Grid item>{children}</Grid>
+            <Grid item><Typography>{text}</Typography></Grid>
           </Grid>
         </CardContent>
       </Card>

@@ -4,8 +4,10 @@ import { Grid } from '@material-ui/core';
 import { Card } from '@material-ui/core';
 import { CardContent } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
-import CodeIcon from '@material-ui/icons/Code';
 import IconCard from './IconCard/IconCard';
+import CodeIcon from '@material-ui/icons/Code';
+import SportsEsportsOutlinedIcon from '@material-ui/icons/SportsEsportsOutlined';
+import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
 
 const useStyles = makeStyles(theme => {
   return {
@@ -33,6 +35,10 @@ const useStyles = makeStyles(theme => {
     textContainer: {
       maxHeight: '200px',
       overflow: 'auto'
+    },
+    cardHeader: {
+      backgroundColor: theme.palette.secondary.main,
+      color: 'white'
     }
   }
 });
@@ -44,40 +50,33 @@ export default function InfoText() {
     <Grid container direction="column" justify="center" className={classes.container}>
       <Grid item className={classes.item}>
         <Card className={classes.paper}>
-          <Grid container direction="row" className={classes.cardContent}>
-            <Grid item>
-              <CardContent>
-                <Typography variant="h5">
-                  Bienvenido
-                </Typography>
-              </CardContent>
-            </Grid>
-            <Grid item>
-              <CardContent>
+          <CardContent className={classes.cardHeader}>
+            <Typography variant="h5">
+              Bienvenido
+            </Typography>
+          </CardContent>
+          <CardContent>
+            <Grid container spacing={1} direction="row" className={classes.cardContent}>
+
+              <Grid item>
                 <Card variant="outlined">
                   <CardContent className={classes.textContainer}>
                     <Typography variant="body2">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque eveniet non officia cupiditate rerum explicabo.<br />
                       Magnam quam doloremque eos obcaecati blanditiis saepe ducimus rerum quas, maiores voluptates non dolores possimus?
                     </Typography>
-                    <Typography variant="body2">
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque eveniet non officia cupiditate rerum explicabo.<br />
-                      Magnam quam doloremque eos obcaecati blanditiis saepe ducimus rerum quas, maiores voluptates non dolores possimus?</p>
-                    </Typography>
                   </CardContent>
                 </Card>
-              </CardContent>
-            </Grid>
-            <Grid item container xs={12}>
-              <CardContent style={{ width: '100%' }} >
+              </Grid>
+              <Grid item container xs={12}>
                 <Grid container spacing={1} justify="space-between">
-                  <IconCard />
-                  <IconCard />
-                  <IconCard />
+                  <IconCard text="Code"><CodeIcon fontSize="large" /></IconCard>
+                  <IconCard text="Web"><LanguageOutlinedIcon fontSize="large" /></IconCard>
+                  <IconCard text="Games"><SportsEsportsOutlinedIcon fontSize="large" /></IconCard>
                 </Grid>
-              </CardContent>
+              </Grid>
             </Grid>
-          </Grid>
+          </CardContent>
         </Card>
       </Grid>
     </Grid>
