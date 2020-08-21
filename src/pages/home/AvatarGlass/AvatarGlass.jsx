@@ -1,6 +1,6 @@
 import React from 'react'
 import './avatarGlass.css'
-import { Paper, Button, Grid, Avatar } from '@material-ui/core'
+import { Paper, Button, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core';
 import avatar from './../../../img/nico.png';
 import GlassPane from '../../../shared/GlassPane';
@@ -32,6 +32,11 @@ const useStyles = makeStyles(theme => {
       'border-color': '#ff1744',
       'border-width': 'thick',
       'z-index': 10,
+      borderRadius: '50%',
+      'background-image': `url(${avatar})`,
+      'background-size': 'cover',
+      'background-color': '#05093cde',
+      'background-blend-mode': 'exclusion',
       '&::before': {
         content: '" "',
         position: "absolute",
@@ -80,7 +85,7 @@ export default function AvatarGlass() {
       className={classes.grid}>
       <Grid item className={classes.avatarContainer}>
         <div className={classes.avatarBorder}>
-          <Avatar className={classes.avatar} src={avatar} />
+          <div className={classes.avatar}></div>
         </div>
       </Grid>
       <Grid item className={classes.gridItem} >
