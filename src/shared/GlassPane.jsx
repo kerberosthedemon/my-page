@@ -26,8 +26,10 @@ const useStyles = makeStyles(theme => {
         'background-repeat': 'no-repeat',
         backgroundPosition: 'center',
         filter: 'blur(5px)',
-        'background-color': '#000000a3',
-        'background-blend-mode': 'color',
+        // 'background-color': '#000000a3',
+        // 'background-blend-mode': 'color',
+        'background-color': '#11030ccc',
+        'background-blend-mode': 'multiply',
       }
     },
     section: {
