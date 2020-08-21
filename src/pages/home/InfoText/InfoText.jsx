@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => {
       height: '545px',
       maxWidth: '600px',
       borderRadius: 0,
-      transform: 'translateY(36px)',
+      // transform: 'translateY(45px)',
       [theme.breakpoints.down('sm')]: {
         width: '300.6px !important',
         transform: 'unset'
@@ -52,23 +52,25 @@ const useStyles = makeStyles(theme => {
     },
     gridPicture: {
       gridColumn: '1/4',
-      backgroundImage: 'url(https://safebooru.org//images/3050/6b7b67fe97714483c544bbf4bd6cd9d90875ba54.jpg?3176055)',
+      backgroundImage: 'url(https://64.media.tumblr.com/986413d5cda5910346c40c195392158e/tumblr_po7m5jgtqE1tkjgc4o1_400.png)',
       backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+      'background-color': '#d53030',
+      'background-blend-mode': 'darken',
     },
     gridIcon: {
-      gridColumn: '1fr',
-      alignSelf: 'center',
-      justifySelf: 'center'
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2)
     },
     gridIcon1: {
       paddingLeft: theme.spacing(2),
     },
     gridIcon2: {
-      paddingLeft: theme.spacing(2),
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1)
     },
     gridIcon3: {
-      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
     }
   }
 });
@@ -80,7 +82,7 @@ export default function InfoText() {
     <Card className={classes.gridContainer}>
       <div className={classes.gridTitle}>
         <Typography variant="h5">
-          Bienvenido
+          About Me
         </Typography>
       </div>
 
@@ -97,9 +99,9 @@ export default function InfoText() {
 
       <div className={classes.gridPicture}></div>
 
-      <div className={`${classes.gridIcon} ${classes.icon1}`}><IconCard text="Code"><CodeIcon fontSize="large" /></IconCard></div>
-      <div className={`${classes.gridIcon} ${classes.icon2}`}><IconCard text="Web"><LanguageOutlinedIcon fontSize="large" /></IconCard></div>
-      <div className={`${classes.gridIcon} ${classes.icon3}`}><IconCard text="Games"><SportsEsportsOutlinedIcon fontSize="large" /></IconCard></div>
+      <div className={`${classes.gridIcon} ${classes.gridIcon1}`}><IconCard text="Code"><CodeIcon fontSize="large" /></IconCard></div>
+      <div className={`${classes.gridIcon} ${classes.gridIcon2}`}><IconCard text="Web"><LanguageOutlinedIcon fontSize="large" /></IconCard></div>
+      <div className={`${classes.gridIcon} ${classes.gridIcon3}`}><IconCard text="Games"><SportsEsportsOutlinedIcon fontSize="large" /></IconCard></div>
 
     </Card>
   )

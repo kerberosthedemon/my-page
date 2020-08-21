@@ -11,6 +11,11 @@ const useStyles = makeStyles(theme => {
       height: '100%',
       width: '100%'
     },
+    infoText: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    }
   }
 });
 
