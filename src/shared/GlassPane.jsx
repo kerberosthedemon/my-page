@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => {
         filter: 'blur(5px)',
         // 'background-color': '#000000a3',
         // 'background-blend-mode': 'color',
-        'background-color': '#0006',
+        'background-color': '#000000b0',
         'background-blend-mode': 'multiply',
       }
     },
