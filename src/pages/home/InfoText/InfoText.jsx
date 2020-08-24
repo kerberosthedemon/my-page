@@ -93,7 +93,7 @@ export default function InfoText() {
               Hi!<br />
               I'm Nicolas, I do web development and video games.<br />
               This is my personal page where you can find links to my projects and contact information.<br />
-              Below are some of my works I've done or I am currently working on:
+              Below are some of my works I've done or I am currently working on.
             </Typography>
           </CardContent>
         </Card>
