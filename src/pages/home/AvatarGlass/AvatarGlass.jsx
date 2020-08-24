@@ -11,7 +11,6 @@ const useStyles = makeStyles(theme => {
       marginTop: 0,
       zIndex: 1,
       display: 'flex',
-      height: '268px !important'
     },
     paper: {
       'border-radius': 0,
@@ -19,8 +18,9 @@ const useStyles = makeStyles(theme => {
       padding: theme.spacing(2),
     },
     grid: {
-      height: '100%',
-      marginTop: '-37px'
+      display: 'grid',
+      gridTemplateRows: '75px 200px 270px',
+      gridTemplateColumns: '300px'
     },
     gridItem: {
       minWidth: '300px'
@@ -48,9 +48,9 @@ const useStyles = makeStyles(theme => {
       }
     },
     avatarContainer: {
-      alignSelf: 'center',
       height: '150px',
-      width: '150px'
+      width: '150px',
+      justifySelf: 'center'
     },
     avatarBorder: {
       background: 'linear-gradient(to top, #6186f4, #60b591)',
@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => {
       width: '100%',
       height: '100%',
       borderRadius: '50%',
-      transform: 'translateY(50%)',
+      //transform: 'translateY(50%)',
       zIndex: 1,
       'box-shadow': theme.shadows[1],
       position: 'relative',
@@ -77,21 +77,16 @@ const useStyles = makeStyles(theme => {
 export default function AvatarGlass() {
   const classes = useStyles();
   return (
-    <Grid container spacing={0}
-      wrap="nowrap"
-      justify="center"
-      direction="column"
-      alignItems="stretch"
-      className={classes.grid}>
-      <Grid item className={classes.avatarContainer}>
+    <div className={classes.grid}>
+      <div className={classes.avatarContainer}>
         <div className={classes.avatarBorder}>
           <div className={classes.avatar}></div>
         </div>
-      </Grid>
-      <Grid item className={classes.gridItem} >
+      </div>
+      <div className={classes.gridItem} >
         <GlassPane />
-      </Grid>
-      <Grid item className={`${classes.paperContainer}`}>
+      </div>
+      <div className={classes.paperContainer}>
         <Paper className={classes.paper}>
           <Grid container className={classes.linkButtonContainer} spacing={0}>
             <Grid item xs={12}>
@@ -105,7 +100,7 @@ export default function AvatarGlass() {
             </Grid>
           </Grid>
         </Paper>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   )
 }

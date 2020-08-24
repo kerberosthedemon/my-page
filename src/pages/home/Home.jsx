@@ -11,6 +11,11 @@ const useStyles = makeStyles(theme => {
       height: '100%',
       width: '100%'
     },
+    avatarGlass: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    },
     infoText: {
       display: 'flex',
       flexDirection: 'column',
@@ -30,7 +35,7 @@ export default function Home() {
         alignItems="stretch"
         spacing={1}
         className={classes.container}>
-        <Grid item>
+        <Grid item className={classes.avatarGlass}>
           <AvatarGlass />
         </Grid>
         <Grid item className={classes.infoText}>
