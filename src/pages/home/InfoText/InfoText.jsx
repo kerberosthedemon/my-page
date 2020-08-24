@@ -90,8 +90,10 @@ export default function InfoText() {
         <Card variant="outlined">
           <CardContent className={classes.textContainer}>
             <Typography variant="body2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque eveniet non officia cupiditate rerum explicabo.<br />
-                    Magnam quam doloremque eos obcaecati blanditiis saepe ducimus rerum quas, maiores voluptates non dolores possimus?
+              Hi!<br />
+              I'm Nicolas, I do web development and video games.<br />
+              This is my personal page where you can find links to my projects and contact information.<br />
+              Below are some of my works I've done or I am currently working on:
             </Typography>
           </CardContent>
         </Card>

@@ -95,13 +95,13 @@ export default function AvatarGlass() {
         <Paper className={classes.paper}>
           <Grid container className={classes.linkButtonContainer} spacing={0}>
             <Grid item xs={12}>
-              <Button variant="outlined" className={classes.linkButton} href="mailto:kerberosthedemon@yandex.com">Contact</Button>
-            </Grid>
-            <Grid item xs={12}>
-              <Button variant="outlined" className={classes.linkButton} href="https://www.linkedin.com/in/nicolas-espindola-69435559/">LinkedIn</Button>
-            </Grid>
-            <Grid item xs={12}>
               <Button variant="outlined" className={classes.linkButton} href="https://nicolas-espindola.xyz">Blog</Button>
+            </Grid>
+            <Grid item xs={12}>
+              <Button variant="outlined" className={classes.linkButton} href="https://github.com/kerberosthedemon">Github</Button>
+            </Grid>
+            <Grid item xs={12}>
+              <Button variant="outlined" className={classes.linkButton} href="mailto:kerberosthedemon@yandex.com">Contact</Button>
             </Grid>
           </Grid>
         </Paper>

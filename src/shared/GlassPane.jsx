@@ -6,13 +6,10 @@ import useFocusElementOnStart from './../hooks/useFocusOnStart';
 const useStyles = makeStyles(theme => {
   return {
     box: {
-      // padding: theme.spacing(2)
       position: 'relative',
-      /* max-width: 600px; */
       'box-shadow': '0 5px 15px rgba(0,0,0,.5)',
       overflow: 'hidden',
       color: '#000',
-      // height: '100%',
       '&::before': {
         content: '" "',
         position: 'absolute',
@@ -26,15 +23,12 @@ const useStyles = makeStyles(theme => {
         'background-repeat': 'no-repeat',
         backgroundPosition: 'center',
         filter: 'blur(5px)',
-        // 'background-color': '#000000a3',
-        // 'background-blend-mode': 'color',
         'background-color': '#000000b0',
         'background-blend-mode': 'multiply',
       }
     },
     section: {
       position: 'relative',
-      // height: '200px'
     },
 
     gridContainer: {
@@ -43,21 +37,15 @@ const useStyles = makeStyles(theme => {
       padding: theme.spacing(2),
       alignItems: 'center'
     },
-    titleContainer: {
-      // alignSelf: 'center'
-    },
     title: {
       zIndex: 2,
-      // paddingTop: '56px',
       color: 'white',
       position: 'relative',
       margin: '0 0 20px',
       padding: 0,
       fontSize: '1.8rem'
     },
-
     button: {
-      // backgroundColor: '#0063cc',
       color: '#ff1744',
       borderColor: '#ff1744',
     },
@@ -72,7 +60,7 @@ export default function GlassPane() {
     <section className={classes.section}>
       <div className={`${classes.box}`}>
         <Grid container direction="column" spacing={0} className={classes.gridContainer}>
-          <Grid item className={classes.titleContainer}>
+          <Grid item>
             <Typography className={classes.title} variant="h5">Nicolas Espindola</Typography>
           </Grid>
           <Grid item>
